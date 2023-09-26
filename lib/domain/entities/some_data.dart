@@ -5,5 +5,5 @@ class SomeData {
 
   SomeData({required this.name, required this.description});
 
-  SomeData.id(int this.id, {required this.name, required this.description});
+  SomeData.id({this.id, required this.name, required this.description});
 }

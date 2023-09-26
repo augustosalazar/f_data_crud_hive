@@ -71,7 +71,8 @@ class _UserDetailPageState extends State<DataDetailPage> {
                       flex: 2,
                       child: ElevatedButton(
                           onPressed: () async {
-                            SomeData updated = SomeData.id(entry.id ?? 0,
+                            SomeData updated = SomeData.id(
+                                id: entry.id ?? -1,
                                 name: controllerName.text,
                                 description: controllerCity.text);
 
