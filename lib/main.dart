@@ -1,10 +1,13 @@
+import 'package:f_data_crud/data/datasource/i_local_data_source.dart';
 import 'package:f_data_crud/data/models/some_data_db.dart';
 import 'package:f_data_crud/ui/controllers/data_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:loggy/loggy.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-import 'domain/repositories/data_repository.dart';
+import 'data/datasource/local_data_source.dart';
+import 'data/repositories/data_repository.dart';
+import 'domain/repositories/i_data_repository.dart';
 import 'domain/use_cases/data_use_case.dart';
 import 'ui/my_app.dart';
 
@@ -24,8 +27,9 @@ void main() async {
       showColors: true,
     ),
   );
-  Get.put(DataRepository());
-  Get.put(DataUseCase());
+  Get.put<ILocalDataSource>(LocalDataSource());
+  Get.put<IDataRepository>(DataRepository(Get.find()));
+  Get.put(DataUseCase(Get.find()));
   Get.put(DataController());
   runApp(const MyApp());
 }

@@ -7,10 +7,8 @@
 
 import 'package:f_data_crud/domain/entities/some_data.dart';
 import 'package:f_data_crud/ui/controllers/data_controller.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:get/get.dart';
-import 'package:f_data_crud/main.dart';
 import 'package:mockito/mockito.dart';
 
 class MockUserController extends GetxService

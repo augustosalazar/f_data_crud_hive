@@ -1,6 +1,5 @@
 import 'package:f_data_crud/domain/entities/some_data.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:loggy/loggy.dart';
 
@@ -10,7 +9,7 @@ class DataDetailPage extends StatefulWidget {
   const DataDetailPage({Key? key}) : super(key: key);
 
   @override
-  _UserDetailPageState createState() => _UserDetailPageState();
+  State<DataDetailPage> createState() => _UserDetailPageState();
 }
 
 class _UserDetailPageState extends State<DataDetailPage> {

@@ -1,10 +1,10 @@
-import 'package:get/get.dart';
-
 import '../entities/some_data.dart';
-import '../repositories/data_repository.dart';
+import '../repositories/i_data_repository.dart';
 
 class DataUseCase {
-  DataRepository repository = Get.find();
+  final IDataRepository repository;
+
+  DataUseCase(this.repository);
 
   Future<List<SomeData>> getAll() async => await repository.getAll();
   Future<void> addEntry(SomeData entry) async =>
