@@ -6,7 +6,7 @@ import 'package:loggy/loggy.dart';
 import '../controllers/data_controller.dart';
 
 class DataDetailPage extends StatefulWidget {
-  const DataDetailPage({Key? key}) : super(key: key);
+  const DataDetailPage({super.key});
 
   @override
   State<DataDetailPage> createState() => _UserDetailPageState();

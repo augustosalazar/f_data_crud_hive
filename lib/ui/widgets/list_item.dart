@@ -6,7 +6,7 @@ import '../pages/data_detail_page.dart';
 
 class ListItem extends StatelessWidget {
   final SomeData entry;
-  const ListItem(this.entry, {Key? key}) : super(key: key);
+  const ListItem(this.entry, {super.key});
 
   @override
   Widget build(BuildContext context) {
