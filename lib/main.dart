@@ -30,6 +30,6 @@ void main() async {
   Get.put<ILocalDataSource>(LocalDataSource());
   Get.put<IDataRepository>(DataRepository(Get.find()));
   Get.put(DataUseCase(Get.find()));
-  Get.put(DataController());
+  Get.put(DataController(Get.find()));
   runApp(const MyApp());
 }

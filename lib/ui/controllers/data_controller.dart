@@ -7,7 +7,9 @@ import '../../domain/use_cases/data_use_case.dart';
 class DataController extends GetxController {
   final RxList<SomeData> _dataList = <SomeData>[].obs;
   List<SomeData> get data => _dataList;
-  final DataUseCase dataUseCase = Get.find();
+  final DataUseCase dataUseCase;
+
+  DataController(this.dataUseCase);
 
   @override
   void onInit() {
